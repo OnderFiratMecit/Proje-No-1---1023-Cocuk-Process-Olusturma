@@ -5,14 +5,14 @@
 int main() {
     pid_t pid1, pid2, pid3;
     pid1=0, pid2=0, pid3=0;
-    pid1= fork(); /* A */
+    pid1= fork(); 
     if(pid1==0){
-        pid2=fork(); /* B */
-        pid3=fork(); /* C */
+        pid2=fork(); 
+        pid3=fork(); 
     } else {
-        pid3=fork(); /* D */
+        pid3=fork(); 
         if(pid3==0) {
-            pid2=fork(); /* E */
+            pid2=fork(); 
         }
         if((pid1 == 0)&&(pid2 == 0))
             printf("Level 1\n");
